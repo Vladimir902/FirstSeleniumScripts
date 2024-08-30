@@ -12,9 +12,9 @@ public class SauceDemo {
           driver.findElement(By.id("user-name"));
           driver.findElement(By.name("password"));
           driver.findElement(By.className("input_error"));
-//
-//        WebElement element = driver.findElement(By.xpath("//input[@placeholder='Password']"));
-//        element.sendKeys("Password");
+
+//       WebElement element = driver.findElement(By.xpath("//input[@placeholder='Password']"));
+//       element.sendKeys("Password");
 
         //driver.findElement(By.cssSelector(".form_group:nth-of-type(2) .input_error.form_input")).sendKeys("aaa");
         driver.findElement(By.cssSelector("input#user-name")).sendKeys("error_user");
