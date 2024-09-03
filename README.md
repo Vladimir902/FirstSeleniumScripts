@@ -39,8 +39,7 @@ If you are using **Maven**:
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.14.0</version> <!-- Replace with the latest version -->
-        </dependency>
+            <version>4.24.0</version>        </dependency>
      <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
