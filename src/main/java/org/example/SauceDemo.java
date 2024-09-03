@@ -25,5 +25,15 @@ public class SauceDemo {
         driver.findElement(By.cssSelector("input#user-name")).sendKeys("error_user");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");
 
+
+        /*Elaborating of the arrangement of the locators:
+        -First I would use id locator because it is the fastest locator and unique
+        -If I can't use id locator I would use cssSelector as the fastest option for more
+        complicated queries
+        -I would use className locator if I need to find multiple elements that are in the
+        same part of the class
+        -If I can't find the locator I would you xPath for the most complex queries
+
+         */
     }
 }
