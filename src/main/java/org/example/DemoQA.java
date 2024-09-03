@@ -28,9 +28,11 @@ public class DemoQA {
         subjectsInput.sendKeys("Math");
         subjectsInput.sendKeys(Keys.ENTER);
 
+        //scroll down to on the page when you find specific element
         WebElement element = driver.findElement(By.id("currentAddress"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
+        //clicking on the third checkbox and entering home address in Address field
         driver.findElement(By.xpath("//label[@for='hobbies-checkbox-3']")).click();
         driver.findElement(By.id("currentAddress")).sendKeys("Kire Kostadinovski 17");
 
