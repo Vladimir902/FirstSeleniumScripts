@@ -1,6 +1,7 @@
 package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SauceDemo {
@@ -24,6 +25,20 @@ public class SauceDemo {
         //driver.findElement(By.cssSelector(".form_group:nth-of-type(2) .input_error.form_input")).sendKeys("aaa");
         driver.findElement(By.cssSelector("input#user-name")).sendKeys("error_user");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");
+
+        WebElement credentialsDiv = driver.findElement(By.cssSelector("div#login_credentials.login_credentials[data-test='login-credentials']"));
+        // Extract the text content of the element
+        String credentialsText = credentialsDiv.getText();
+        // Check if the extracted text contains "error_user"
+        if (credentialsText.contains("error_user")) {
+            System.out.println("Found text: error_user");
+        } else {
+            System.out.println("Text 'error_user' not found.");
+        }
+
+        WebElement passwordDiv = driver.findElement(By.xpath("//div[@class='login_password' and @data-test='login-password' and contains(text(), 'secret_sauce')]"));
+        String passwordText = passwordDiv.getText();
+        System.out.println("Extracted Text: " + passwordText);
 
 
         /*Elaborating of the arrangement of the locators:
